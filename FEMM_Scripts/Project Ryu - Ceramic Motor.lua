@@ -128,12 +128,13 @@ clearconsole()
 print("Ceramic Motor Simulation Script")
 if prompter==1 then
 	repeat	
-		messagebox("Please input your specific data in millimiters")
+		messagebox("Please input your specific data in millimiters")		
 		vcdia = tonumber(prompt("Voice Coil Diameter [mm]"))
 		vch = tonumber(prompt("Voice Coil Height [mm]"))
 		vcw = tonumber(prompt("Voice Coil Thickness [mm]"))
 		xmax = tonumber(prompt("Desired One Way Xmax [mm]"))
 		flux = tonumber(prompt("Desired Flux Density [T]"))
+		mtype = tonumber(prompt("Enter 0 for overhung or 1 for underhung motor"))
 		print("User Input Data")		
 		print("Voice Coil Dia:"..vcdia.."mm")
 		print("Voice Coil Height:"..vch.."mm")
@@ -141,10 +142,13 @@ if prompter==1 then
 		print("Xmax:"..xmax.."mm")	
 		print("Flux Density:"..flux.."T")
 		messagebox("Verify Input Data...Voice Coil Dia:"..vcdia.."mm Voice Coil Height:"..vch.."mm Voice Coil Thickness:"..vcw.."mm Xmax:"..xmax.."mm Flux Density:"..flux.."T")
+		filename = prompt("Project Name")
 		local confirm = prompt("Confirm? [type yes if data is ok, press return to go back]")
 		if confirm == "yes" then 
 			max_tscp = vcdia/6
-			prompter = 0				
+			if mtype == 0 or mtype == 1 then
+				prompter = 0				
+			end
 		end
 	until prompter==0 
 end
