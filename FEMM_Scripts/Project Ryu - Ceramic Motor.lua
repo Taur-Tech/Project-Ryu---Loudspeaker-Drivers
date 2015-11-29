@@ -63,7 +63,7 @@ vcdia       = 50    --voice coil diameter [mm]
 vch         = 15    --voice coil height [mm]
 vcw         = 0.5   --voice coil width [mm]
 xmax        = 5     --desired xmax in one direction [mm]
-flux        = 2     --desired flux density in gap [mm]
+flux        = 1     --desired flux density in gap [mm]
 mtype       = 0     --0 for overhang, 1 for underhung
 filename    = 'default'
 
@@ -291,8 +291,46 @@ end
     
 --Materials
 mi_addmaterial("Air",1,1,0,0,0,0,1,0,0,0,0,0)
-mi_addmaterial("Steel",1404,1404,0,0,5.8,0,20,1,0,0,0,0,0)
+mi_addmaterial("Steel",902.6,902.6,0,0,5.8,0,20,1,0,0,0,0,0)
 mi_addmaterial("Ceramic5",1.886,1.886,191262,0,0,0,0,0,0,0,0,0,0)
+mi_addbhpoint("Steel", 0.000000, 0.000000)
+mi_addbhpoint("Steel", 0.211862, 79.577472)
+mi_addbhpoint("Steel", 0.265665, 100.182101)
+mi_addbhpoint("Steel", 0.332377, 126.121793)
+mi_addbhpoint("Steel", 0.414377, 158.777930)
+mi_addbhpoint("Steel", 0.513811, 199.889571)
+mi_addbhpoint("Steel", 0.631899, 251.646061)
+mi_addbhpoint("Steel", 0.767784, 316.803620)
+mi_addbhpoint("Steel", 0.917018, 398.832128)
+mi_addbhpoint("Steel", 1.070353, 502.099901)
+mi_addbhpoint("Steel", 1.214255, 632.106325)
+mi_addbhpoint("Steel", 1.334637, 795.774715)
+mi_addbhpoint("Steel", 1.422981, 1001.821011)
+mi_addbhpoint("Steel", 1.480634, 1261.217929)
+mi_addbhpoint("Steel", 1.517214, 1587.779301)
+mi_addbhpoint("Steel", 1.544515, 1998.895710)
+mi_addbhpoint("Steel", 1.571296, 2516.460605)
+mi_addbhpoint("Steel", 1.602049, 3168.036204)
+mi_addbhpoint("Steel", 1.638404, 3988.321282)
+mi_addbhpoint("Steel", 1.680490, 5020.999013)
+mi_addbhpoint("Steel", 1.727311, 6321.063250)
+mi_addbhpoint("Steel", 1.776659, 7957.747155)
+mi_addbhpoint("Steel", 1.825401, 10018.210114)
+mi_addbhpoint("Steel", 1.870557, 12612.179293)
+mi_addbhpoint("Steel", 1.910809, 15877.793010)
+mi_addbhpoint("Steel", 1.947222, 19988.957103)
+mi_addbhpoint("Steel", 1.982328, 25164.606052)
+mi_addbhpoint("Steel", 2.018252, 31680.362037)
+mi_addbhpoint("Steel", 2.055398, 39883.212823)
+mi_addbhpoint("Steel", 2.092545, 50209.990127)
+mi_addbhpoint("Steel", 2.128095, 63210.632497)
+mi_addbhpoint("Steel", 2.161612, 79577.471546)
+mi_addbhpoint("Steel", 2.194644, 100182.101136)
+mi_addbhpoint("Steel", 2.230339, 126121.792926)
+mi_addbhpoint("Steel", 2.272386, 158777.930096)
+mi_addbhpoint("Steel", 2.324282, 199889.571030)
+mi_addbhpoint("Steel", 2.389356, 251646.060522)
+mi_addbhpoint("Steel", 2.471238, 316803.620370)
 
 --Blocks
 function draw_blocks(magnet, magnet_no, pw)	
