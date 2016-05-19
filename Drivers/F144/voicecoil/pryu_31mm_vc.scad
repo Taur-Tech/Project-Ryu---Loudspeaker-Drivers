@@ -5,10 +5,9 @@ former_thickness    = 0.1;
 former_height       = 28;
 former_outer_radius = 15.5;
 
-winding_height      = 6;
 wire_diameter       = 0.173;
 layers_per_side     = 1;
-turns_per_layer     = 32;
+turns_per_layer     = 26;
 
 // Draw former
 color("black"){
