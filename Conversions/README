@@ -1,0 +1,4 @@
+##Converting PM drivers to FC
+
+This folder contains Field Coil motor proposal for various commercial drivers. These motors are sometimes designed from aproximated/guessed values due to lack of real measurements so there might be errors in dimensions and might not fit exactly.
+The information is provided as is.
