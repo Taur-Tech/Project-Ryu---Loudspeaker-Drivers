@@ -1,0 +1,9 @@
+#F144/OB Data
+#Voice coil inductance
+#Instrument: 	DER EE DE-5000
+#
+#Data table, tab separated		
+#Ifc	Le@1kHz	Le@10kHz [mH]
+0A	1.01	0.346	
+1A	0.8374	0.2979	
+2A	0.8014	0.2722	

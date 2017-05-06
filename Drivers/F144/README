@@ -2,5 +2,16 @@
 
 12" Wide-range Field Coil Transducer
 
-###Motor
-In motor folder you can find drawings and 3D files for F144 motor pole pieces. Please check the 2D files as they contain information not included in the 3D ones.
+###F144 Driver Models
+This folders contains design files for drivers based on F144 motor. Base models are F144/W and F144/OB.
+
+
+###Folder structured
+common:
+Elements conmmon to all driver models except the motor part
+
+models:
+Design and data files for specific models
+
+motor: 
+Design and data files for F144 motor. You can find drawings and 3D files for F144 motor pole pieces. Please check the 2D files as they contain information not included in the 3D ones.
