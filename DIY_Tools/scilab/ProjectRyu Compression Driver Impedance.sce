@@ -9,21 +9,21 @@ c = 343
 p0 = 2*(10^-5)
 
 // Parameters
-a = 0.025
-Eg = 2.83
-Re = 6.2
-Le = 0.0002
-BL = 10
-Mmd = 0.003
-Cms = 0.03*(10^-3)
-Rms = 9
-SD = 0.00911
-Vaf = 0.00911
+a = 0.1 //Diaphragm diameter in m
+Eg = 2.83 // Generator Voltage
+Re = 3.655 // DC Resistance of the voice coil
+Le = 0.0001466 // Impedance of the voice coil (either 1Khz or 10Khz)
+BL = 10 //Motor force factor 
+Mmd = 0.0044 //Mass of the diaphragm in kg
+Cms = 0.03*(10^-3) //Compliance of suspension in m/N
+Rms = 9 //Mechanical resistance in mechanical ohms
+SD = 0.00911 //Radiating surface area in m^2
+Vaf = 0.00911 //Volume of the compression chamber
 Laf = 0.001 //distance between diaphragm and phase plug
 Wpp = 3 //width of phaseplug slit
 Rpp = 2 //ration between area of phaseplug entry and exit
-Vab = 0.0002355
-ST = 0.0000491
+Vab = 0.0002355 //Volume of the back chamber
+ST = 0.0000491 //Phase Plug throat area
 
 
 function y=impedance_bl(f,bl)
@@ -92,6 +92,9 @@ endfunction
 
 clf();
 subplot(211);
+xtitle("Z vs Cab");
+xlabel("Frequency [Hz]");
+ylabel("Impedance Magnitude [ohms]");
 for k=1:10
     x=[20:20000];
     //plot2d(x,acoustic_pressure(x), logflag="ln");
@@ -99,7 +102,10 @@ for k=1:10
     xgrid(2);
 end
 subplot(212);
-for k=1:10
+xtitle("Z vs BL");
+xlabel("Frequency [Hz]");
+ylabel("Impedance Magnitude [ohms]");
+for k=5:20
     x=[20:20000];
     //plot2d(x,acoustic_pressure(x), logflag="ln");
     plot2d(x,impedance_bl(x,k), logflag="ln");
