@@ -71,15 +71,15 @@
 --              s = w['dia']*(motor diameter)+w['pow']*(fc power)+w['flx']*(flux)
 
 
-prompter	= 1
+prompter	= 0
 --User Variables
 mdia            = 0
 mheight         = 120
-vcdia           = 50
-vcheight        = 5
+vcdia           = 39
+vcheight        = 4
 gapwidth        = 1
-gapheight       = 14
-flux		= 1.5
+gapheight       = 5
+flux		= 2.0
 
 
 --User Constants
